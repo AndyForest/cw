@@ -6,40 +6,40 @@
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_forward" id="276">
+      <block type="oled_cleardisplay" id="26">
         <next>
-          <block type="oled_cleardisplay" id="26">
+          <block type="oled_color" id="359">
+            <field name="OBJECT">BLACK</field>
             <next>
-              <block type="oled_setcursor" id="196" inline="true">
-                <value name="STARTX">
-                  <block type="math_number" id="212">
-                    <field name="NUM">10</field>
-                  </block>
-                </value>
-                <value name="STARTY">
-                  <block type="math_number" id="219">
-                    <field name="NUM">10</field>
-                  </block>
-                </value>
+              <block type="movement_forward" id="276">
                 <next>
-                  <block type="oled_drawnumber" id="52" inline="true">
-                    <value name="NUMBER">
-                      <block type="sensor_spectrometer" id="8">
-                        <field name="LIGHT">RED</field>
+                  <block type="oled_setcursor" id="196" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="212">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="219">
+                        <field name="NUM">10</field>
                       </block>
                     </value>
                     <next>
-                      <block type="movement_stop" id="266">
+                      <block type="robot_delay" id="180" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="187">
+                            <field name="NUM">1000</field>
+                          </block>
+                        </value>
                         <next>
-                          <block type="multimedia_stopupdate" id="317">
-                            <next>
-                              <block type="robot_delay" id="180" inline="true">
-                                <value name="DELAY">
-                                  <block type="math_number" id="187">
-                                    <field name="NUM">1000</field>
-                                  </block>
-                                </value>
+                          <block type="oled_drawnumber" id="52" inline="true">
+                            <value name="NUMBER">
+                              <block type="sensor_spectrometer" id="8">
+                                <field name="LIGHT">RED</field>
                               </block>
+                            </value>
+                            <next>
+                              <block type="movement_stop" id="266"></block>
                             </next>
                           </block>
                         </next>

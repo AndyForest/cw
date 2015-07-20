@@ -1,13 +1,22 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_cleardisplay" id="26" x="-28" y="-20">
-    <next>
-      <block type="oled_drawnumber" id="52" inline="true">
-        <value name="NUMBER">
-          <block type="sensor_spectrometer" id="8">
-            <field name="LIGHT">RED</field>
-          </block>
-        </value>
+  <block type="controls_repeat" id="157" inline="true" x="-70" y="325">
+    <value name="TIMES">
+      <block type="math_number" id="178">
+        <field name="NUM">100000000000</field>
       </block>
-    </next>
+    </value>
+    <statement name="DO">
+      <block type="oled_cleardisplay" id="26">
+        <next>
+          <block type="oled_drawnumber" id="52" inline="true">
+            <value name="NUMBER">
+              <block type="sensor_spectrometer" id="8">
+                <field name="LIGHT">RED</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
   </block>
 </xml>

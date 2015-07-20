@@ -1,3 +1,13 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="1" x="-8" y="2"></block>
+  <block type="oled_cleardisplay" id="26" x="-28" y="-20">
+    <next>
+      <block type="oled_drawnumber" id="52" inline="true">
+        <value name="NUMBER">
+          <block type="sensor_spectrometer" id="8">
+            <field name="LIGHT">RED</field>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
 </xml>

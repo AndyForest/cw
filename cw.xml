@@ -11,7 +11,7 @@
           <block type="controls_if" id="523" inline="false">
             <value name="IF0">
               <block type="logic_compare" id="576" inline="true">
-                <field name="OP">GT</field>
+                <field name="OP">LT</field>
                 <value name="A">
                   <block type="sensor_spectrometer" id="583">
                     <field name="LIGHT">RED</field>

@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_repeat" id="157" inline="true" x="50" y="153">
+  <block type="controls_repeat" id="157" inline="true" x="87" y="179">
     <value name="TIMES">
       <block type="math_number" id="178">
         <field name="NUM">10000</field>
@@ -10,8 +10,18 @@
         <next>
           <block type="controls_if" id="523" inline="false">
             <value name="IF0">
-              <block type="math_number" id="546">
-                <field name="NUM">60</field>
+              <block type="logic_compare" id="576" inline="true">
+                <field name="OP">GT</field>
+                <value name="A">
+                  <block type="sensor_spectrometer" id="583">
+                    <field name="LIGHT">RED</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="590">
+                    <field name="NUM">60</field>
+                  </block>
+                </value>
               </block>
             </value>
             <statement name="DO0">

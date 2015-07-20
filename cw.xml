@@ -1,13 +1,13 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="276" x="-25" y="356">
-    <next>
-      <block type="controls_repeat" id="157" inline="true">
-        <value name="TIMES">
-          <block type="math_number" id="178">
-            <field name="NUM">10000</field>
-          </block>
-        </value>
-        <statement name="DO">
+  <block type="controls_repeat" id="157" inline="true" x="-40" y="365">
+    <value name="TIMES">
+      <block type="math_number" id="178">
+        <field name="NUM">10000</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="movement_forward" id="276">
+        <next>
           <block type="oled_cleardisplay" id="26">
             <next>
               <block type="oled_setcursor" id="196" inline="true">
@@ -45,8 +45,8 @@
               </block>
             </next>
           </block>
-        </statement>
+        </next>
       </block>
-    </next>
+    </statement>
   </block>
 </xml>
